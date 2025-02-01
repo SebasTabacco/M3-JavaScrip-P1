@@ -4,51 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mayor de una Serie de Números</title>
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="es">
+    <script>
+        let numeros = [];
+        let input;
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mayor de una Serie de Números</title>
-    </head>
+        while (true) {
+            input = prompt("Ingrese un número (o 'fin' para terminar):", '');
 
-    <body>
-        <script>
-            let numeros = [];
-            let input;
+            if (input.toLowerCase() === 'fin') {
+                break;
+            }
 
-            while (true) {
-                input = prompt("Ingrese un número (o 'fin' para terminar):", '');
-
-                if (input.toLowerCase() === 'fin') {
-                    break;
-                }
-
-                let num = Number(input);
-                if (!Number.isNaN(num)) {
-                    numeros.push(num);
-                } else {
-                    alert("Por favor, ingrese Numeros no Letras.");
+            let num = Number(input);
+            if (!Number.isNaN(num)) {
+                numeros.push(num);
+            } else {
+                alert("Por favor, ingrese Numeros no Letras.");
+            }
+        }
+        if (numeros.length > 0) {
+            let mayor = numeros[0];
+            for (let i = 1; i < numeros.length; i++) {
+                if (numeros[i] > mayor) {
+                    mayor = numeros[i];
                 }
             }
-            if (numeros.length > 0) {
-                let mayor = numeros[0];
-                for (let i = 1; i < numeros.length; i++) {
-                    if (numeros[i] > mayor) {
-                        mayor = numeros[i];
-                    }
-                }
-                document.write(`El mayor número ingresado es: ${mayor}`);
-            } 
-        </script>
-    </body>
+            document.write(`El mayor número ingresado es: ${mayor}`);
+        } 
+    </script>
+</body>
 
-    </html>
+</html>
 
 </body>
 
