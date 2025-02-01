@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const num = parseInt(prompt('Ingresar Distancia a Recorrer:', ''))
+        if (num <= 1000) {
+            document.write('Debe  ir Caminando,');
+        } else if (num <= 10000) {
+            document.write('Debe ir en Bici');
+        } else if (num <= 30000) {
+            document.write('Debe ir en Colectivo');
+        } else if (num <= 100000) {
+            document.write('Debe usar el Auto');
+        } else if (num => 100000) {
+            document.write('Debe Ir en Avion');
+        }
+    </script>
+</body>
+
+</html>
